@@ -25,10 +25,10 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    DP_DLR,         DP_AMPR,                DP_LBRC,        DP_LCBR,                DP_RCBR,                DP_LPRN,        DP_EQL,             KC_PGUP,        KC_ASTR,    KC_RPRN,            KC_PLUS,        KC_RBRACKET,    KC_EXLM,        KC_HASH,
-    KC_TAB,         KC_SCOLON,              KC_COMMA,       KC_DOT,                 KC_P,                   KC_Y,           KC_END,             KC_PGDOWN,      KC_F,       KC_G,               KC_C,           KC_R,           KC_L,           KC_AT,
-    KC_CAPSLOCK,    KC_A,                   KC_O,           KC_E,                   KC_U,                   KC_I,           KC_AMPR,            KC_SLASH,       KC_D,       KC_H,               KC_T,           KC_N,           KC_S,           KC_BSLASH,
-    KC_LSHIFT,      KC_QUOTE,               KC_Q,           KC_J,                   KC_K,                   KC_X,                                               KC_B,       KC_M,               KC_W,           KC_V,           KC_Z,           KC_MINUS,
+    DP_DLR,         DP_AMPR,                DP_LBRC,        DP_LCBR,                DP_RCBR,                DP_LPRN,        DP_EQL,             KC_PGUP,        DP_ASTR,    DP_RPRN,            DP_PLUS,        DP_RBRC,        DP_EXLM,        DP_HASH,
+    KC_TAB,         DP_SCLN,                DP_COMM,        DP_DOT,                 DP_P,                   DP_Y,           KC_HOME,            KC_PGDOWN,      DP_F,       DP_G,               DP_C,           DP_R,           DP_L,           DP_AT,
+    KC_CAPSLOCK,    DP_A,                   DP_O,           DP_E,                   DP_U,                   DP_I,           KC_END,             DP_SLSH,        DP_D,       DP_H,               DP_T,           DP_N,           DP_S,           DP_MINS,
+    KC_LSHIFT,      DP_QUOT,                DP_Q,           DP_J,                   DP_K,                   DP_X,                                               DP_B,       DP_M,               DP_W,           DP_V,           DP_Z,           DP_BSLS,
     KC_LCTRL,       KC_TRNS,                KC_ESCAPE,      KC_RALT,                KC_LALT,                KC_BSPACE,                                          KC_LGUI,    KC_LEFT,            KC_UP,          KC_DOWN,        KC_RIGHT,       KC_ENTER,
                                                             KC_SPACE,               KC_INSERT,              TG(1),                                              TG(2),      KC_DELETE,          KC_ENTER
   ),
