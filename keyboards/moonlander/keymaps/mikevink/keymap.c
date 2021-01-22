@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPSLOCK,    DP_A,                   DP_O,           DP_E,                   DP_U,                   DP_I,           KC_END,             DP_SLSH,        DP_D,       DP_H,               DP_T,           DP_N,           DP_S,           DP_MINS,
     KC_LSHIFT,      DP_QUOT,                DP_Q,           DP_J,                   DP_K,                   DP_X,                                               DP_B,       DP_M,               DP_W,           DP_V,           DP_Z,           DP_BSLS,
     KC_LCTRL,       KC_TRNS,                KC_ESCAPE,      KC_RALT,                KC_LALT,                KC_BSPACE,                                          KC_LGUI,    KC_LEFT,            KC_UP,          KC_DOWN,        KC_RIGHT,       KC_ENTER,
-                                                            KC_SPACE,               KC_INSERT,              TG(1),                                              TG(2),      KC_DELETE,          KC_ENTER
+                                                            KC_SPACE,               KC_INSERT,              TO(1),                                              TO(2),      KC_DELETE,          KC_ENTER
   ),
   [1] = LAYOUT_moonlander(
     KC_TRNS,        KC_TRNS,                KC_TRNS,        KC_TRNS,                KC_TRNS,                KC_TRNS,        KC_TRNS,            KC_TRNS,        KC_TRNS,    KC_TRNS,            KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_TRNS,
@@ -49,10 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                             KC_MS_BTN1,             KC_MS_BTN2,             KC_TRNS,                                            KC_TRNS,    TO(3),              KC_TRNS
   ),
   [3] = LAYOUT_moonlander(
-    KC_GRAVE,       KC_1,                   KC_2,           KC_3,                   KC_4,                   KC_5,           KC_RBRACKET,        KC_TRNS,        KC_6,       KC_7,               KC_8,           KC_9,           KC_0,           KC_TRNS,
-    KC_TRNS,        KC_Q,                   KC_W,           KC_E,                   KC_R,                   KC_T,           KC_LBRACKET,        KC_TRNS,        KC_Y,       KC_U,               KC_I,           KC_O,           KC_P,           KC_TRNS,
-    KC_TRNS,        KC_A,                   KC_S,           KC_D,                   KC_F,                   KC_G,           KC_F5,              KC_TRNS,        KC_H,       KC_J,               KC_K,           KC_L,           KC_SCOLON,      KC_TRNS,
-    KC_TRNS,        KC_Z,                   KC_X,           KC_C,                   KC_V,                   KC_B,                                               KC_N,       KC_M,               KC_COMMA,       KC_DOT,         KC_SLASH,       KC_TRNS,
+    KC_GESC,        DP_1,                   DP_2,           DP_3,                   DP_4,                   DP_5,           DP_LBRC,            KC_TRNS,        DP_6,       DP_7,               DP_8,           DP_9,           DP_0,           KC_TRNS,
+    KC_TRNS,        DP_Q,                   DP_W,           DP_E,                   DP_R,                   DP_T,           DP_RBRC,            KC_TRNS,        DP_Y,       DP_U,               DP_I,           DP_O,           DP_P,           KC_TRNS,
+    KC_TRNS,        DP_A,                   DP_S,           DP_D,                   DP_F,                   DP_G,           KC_F5,              KC_TRNS,        DP_H,       DP_J,               DP_K,           DP_L,           DP_SCLN,        KC_TRNS,
+    KC_TRNS,        DP_Z,                   DP_X,           DP_C,                   DP_V,                   DP_B,                                               DP_N,       DP_M,               DP_COMM,        DP_DOT,         DP_SLSH,        KC_TRNS,
     KC_TRNS,        KC_TRNS,                KC_TRNS,        KC_TRNS,                KC_TRNS,                KC_TRNS,                                            KC_TRNS,    KC_TRNS,            KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
                                                             KC_TRNS,                KC_TRNS,                KC_ESCAPE,                                          TO(0),      KC_TRNS,            KC_TRNS
   ),
