@@ -71,27 +71,27 @@ typedef struct PACKED {
 const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
     [0] = {
         // left half, top to bottom, left to right
-        V_SMB(DP_DLR),          V_SPC(KC_TAB),              V_MOD(KC_CAPSLOCK),         V_MOD(KC_LSHIFT),   V_DED,
-        V_SMB(DP_AMPR),         V_SMB(DP_SCLN),             V_SMB(DP_A),                V_SMB(DP_QUOT),     V_MOD(KC_LCTRL),
-        V_SMB(DP_LBRC),         V_SMB(DP_COMM),             V_SMB(DP_O),                V_SMB(DP_Q),        V_GUI(KC_ESC),
-        V_SMB(DP_LCBR),         V_SMB(DP_DOT),              V_SMB(DP_E),                V_SMB(DP_J),        V_MOD(KC_RALT),
-        V_SMB(DP_RCBR),         V_SMB(DP_P),                V_SMB(DP_U),                V_SMB(DP_K),        V_MOD(KC_LALT),
-        V_SMB(DP_LPRN),         V_SMB(DP_Y),                V_SMB(DP_I),                V_SMB(DP_X),
-        V_SMB(DP_EQL),          V_NAV(KC_HOME),             V_NAV(KC_END),
+/* 0*/  V_SMB(DP_DLR),          V_SPC(KC_TAB),              V_MOD(KC_CAPSLOCK),         V_MOD(KC_LSHIFT),   V_DED,
+/* 5*/  V_SMB(DP_AMPR),         V_SMB(DP_SCLN),             V_SMB(DP_A),                V_SMB(DP_QUOT),     V_MOD(KC_LCTRL),
+/*10*/  V_SMB(DP_LBRC),         V_SMB(DP_COMM),             V_SMB(DP_O),                V_SMB(DP_Q),        V_GUI(KC_ESC),
+/*15*/  V_SMB(DP_LCBR),         V_SMB(DP_DOT),              V_SMB(DP_E),                V_SMB(DP_J),        V_MOD(KC_RALT),
+/*20*/  V_SMB(DP_RCBR),         V_SMB(DP_P),                V_SMB(DP_U),                V_SMB(DP_K),        V_MOD(KC_LALT),
+/*25*/  V_SMB(DP_LPRN),         V_SMB(DP_Y),                V_SMB(DP_I),                V_SMB(DP_X),
+/*29*/  V_SMB(DP_EQL),          V_NAV(KC_HOME),             V_NAV(KC_END),
         // left flap
-        V_SPC(KC_SPACE),        V_SPC(KC_INSERT),           V_TO(1),
-        V_SPC(KC_BSPACE),
+/*32*/  V_SPC(KC_SPACE),        V_SPC(KC_INSERT),           V_TO(1),
+/*35*/  V_SPC(KC_BSPACE),
         // right half, top to bottom, right to left
-        V_SMB(DP_HASH),         V_SMB(DP_AT),               V_SMB(DP_MINS),             V_SMB(DP_BSLS),     V_SPC(KC_ENTER),
-        V_SMB(DP_EXLM),         V_SMB(DP_L),                V_SMB(DP_S),                V_SMB(DP_Z),        V_NAV(KC_RIGHT),
-        V_SMB(DP_RBRC),         V_SMB(DP_R),                V_SMB(DP_N),                V_SMB(DP_V),        V_NAV(KC_DOWN),
-        V_SMB(DP_PLUS),         V_SMB(DP_C),                V_SMB(DP_T),                V_SMB(DP_W),        V_NAV(KC_UP),
-        V_SMB(DP_RPRN),         V_SMB(DP_G),                V_SMB(DP_H),                V_SMB(DP_M),        V_NAV(KC_LEFT),
-        V_SMB(DP_ASTR),         V_SMB(DP_F),                V_SMB(DP_D),                V_SMB(DP_B),
-        V_NAV(KC_PGUP),         V_NAV(KC_PGDOWN),           V_SMB(DP_SLSH),
+/*36*/  V_SMB(DP_HASH),         V_SMB(DP_AT),               V_SMB(DP_MINS),             V_SMB(DP_BSLS),     V_SPC(KC_ENTER),
+/*41*/  V_SMB(DP_EXLM),         V_SMB(DP_L),                V_SMB(DP_S),                V_SMB(DP_Z),        V_NAV(KC_RIGHT),
+/*46*/  V_SMB(DP_RBRC),         V_SMB(DP_R),                V_SMB(DP_N),                V_SMB(DP_V),        V_NAV(KC_DOWN),
+/*51*/  V_SMB(DP_PLUS),         V_SMB(DP_C),                V_SMB(DP_T),                V_SMB(DP_W),        V_NAV(KC_UP),
+/*56*/  V_SMB(DP_RPRN),         V_SMB(DP_G),                V_SMB(DP_H),                V_SMB(DP_M),        V_NAV(KC_LEFT),
+/*61*/  V_SMB(DP_ASTR),         V_SMB(DP_F),                V_SMB(DP_D),                V_SMB(DP_B),
+/*65*/  V_NAV(KC_PGUP),         V_NAV(KC_PGDOWN),           V_SMB(DP_SLSH),
         // right flap
-        V_TO(2),                V_SPC(KC_DELETE),           V_SPC(KC_ENTER),
-        V_GUI(KC_LGUI),
+/*68*/  V_TO(2),                V_SPC(KC_DELETE),           V_SPC(KC_ENTER),
+/*71*/  V_GUI(KC_LGUI),
     },
     [1] = {
         // left half, top to bottom, left to right
@@ -167,44 +167,28 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
     },
 };
 
+// helpers to transform own structs to expected structs
+// clang-format off
+#define V_LAYOUT_TO_moonlander(layout) LAYOUT_moonlander( \
+    layout[0].key, layout[5].key, layout[10].key, layout[15].key, layout[20].key, layout[25].key, layout[29].key,   layout[65].key, layout[61].key, layout[56].key, layout[51].key, layout[46].key, layout[41].key, layout[36].key, \
+    layout[1].key, layout[6].key, layout[11].key, layout[16].key, layout[21].key, layout[26].key, layout[30].key,   layout[66].key, layout[62].key, layout[57].key, layout[52].key, layout[47].key, layout[42].key, layout[37].key, \
+    layout[2].key, layout[7].key, layout[12].key, layout[17].key, layout[22].key, layout[27].key, layout[31].key,   layout[67].key, layout[63].key, layout[58].key, layout[53].key, layout[48].key, layout[43].key, layout[38].key, \
+    layout[3].key, layout[8].key, layout[13].key, layout[18].key, layout[23].key, layout[28].key,                                   layout[64].key, layout[59].key, layout[54].key, layout[49].key, layout[44].key, layout[39].key, \
+    layout[4].key, layout[9].key, layout[14].key, layout[19].key, layout[24].key,                 layout[35].key,   layout[71].key,                 layout[60].key, layout[55].key, layout[50].key, layout[45].key, layout[40].key, \
+                                                                  layout[32].key, layout[33].key, layout[34].key,   layout[68].key, layout[69].key, layout[70].key \
+)
+// clang-format on
+
 
 
 // left to right, top to bottom
 // big red buttons are in line with the first to last row
 // last 6 keys are ltr as well
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_moonlander(
-    DP_DLR,         DP_AMPR,            DP_LBRC,            DP_LCBR,                DP_RCBR,                DP_LPRN,            DP_EQL,         KC_PGUP,        DP_ASTR,    DP_RPRN,            DP_PLUS,        DP_RBRC,        DP_EXLM,        DP_HASH,
-    KC_TAB,         DP_SCLN,            DP_COMM,            DP_DOT,                 DP_P,                   DP_Y,               KC_HOME,        KC_PGDOWN,      DP_F,       DP_G,               DP_C,           DP_R,           DP_L,           DP_AT,
-    KC_CAPSLOCK,    DP_A,               DP_O,               DP_E,                   DP_U,                   DP_I,               KC_END,         DP_SLSH,        DP_D,       DP_H,               DP_T,           DP_N,           DP_S,           DP_MINS,
-    KC_LSHIFT,      DP_QUOT,            DP_Q,               DP_J,                   DP_K,                   DP_X,                                               DP_B,       DP_M,               DP_W,           DP_V,           DP_Z,           DP_BSLS,
-    KC_NO,          KC_LCTRL,           KC_ESC,             KC_RALT,                KC_LALT,                KC_BSPACE,                                          KC_LGUI,    KC_LEFT,            KC_UP,          KC_DOWN,        KC_RIGHT,       KC_ENTER,
-                                                            KC_SPACE,               KC_INSERT,              TO(1),                                              TO(2),      KC_DELETE,          KC_ENTER
-  ),
-  [1] = LAYOUT_moonlander(
-    KC_NO,          KC_NO,                KC_NO,            KC_NO,                  KC_NO,                  KC_NO,          KC_NO,            KC_NO,            KC_NO,      KC_NO,              KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_NO,
-    KC_NO,          KC_F1,                KC_F2,            KC_F3,                  KC_F4,                  KC_NO,          KC_NO,            KC_NO,            KC_NO,      KC_KP_7,            KC_KP_8,        KC_KP_9,        KC_KP_PLUS,     KC_NO,
-    KC_NO,          KC_F5,                KC_F6,            KC_F7,                  KC_F8,                  KC_NO,          KC_NO,            KC_NO,            KC_NO,      KC_KP_4,            KC_KP_5,        KC_KP_6,        KC_KP_PLUS,     KC_NO,
-    KC_LSHIFT,      KC_F9,                KC_F10,           KC_F11,                 KC_F12,                 KC_NO,                                              KC_NO,      KC_KP_1,            KC_KP_2,        KC_KP_3,        KC_KP_ENTER,    KC_NO,
-    KC_NO,          KC_LCTRL,             KC_NO,            KC_NO,                  KC_LALT,                KC_NO,                                              KC_NO,      KC_KP_0,            KC_KP_0,        KC_KP_DOT,      KC_KP_ENTER,    KC_NO,
-                                                            KC_NO,                  KC_NO,                  TO(0),                                              KC_NO,      KC_NO,              KC_NO
-  ),
-  [2] = LAYOUT_moonlander(
-    KC_NO,          KC_MEDIA_PREV_TRACK,    KC_MEDIA_STOP,  KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,    KC_NO,          KC_AUDIO_MUTE,      WEBUSB_PAIR,    KC_NO,      RGB_HUI,            RGB_HUD,        KC_NO,          KC_NO,          RESET,
-    KC_NO,          KC_NO,                  KC_MS_UP,       KC_NO,                  KC_MS_WH_UP,            KC_NO,          KC_AUDIO_VOL_UP,    KC_NO,          KC_NO,      RGB_MOD,            RGB_SLD,        KC_NO,          KC_NO,          KC_NO,
-    KC_NO,          KC_MS_LEFT,             KC_MS_DOWN,     KC_MS_RIGHT,            KC_MS_WH_DOWN,          KC_NO,          KC_AUDIO_VOL_DOWN,  KC_NO,          KC_NO,      TOGGLE_LAYER_COLOR, RGB_TOG,        KC_NO,          KC_NO,          KC_NO,
-    KC_LSHIFT,      KC_NO,                  KC_NO,          KC_NO,                  KC_NO,                  KC_NO,                                              KC_NO,      RGB_SPI,            RGB_SPD,        KC_NO,          KC_NO,          RGB_VAI,
-    KC_NO,          KC_LCTRL,               KC_NO,          KC_NO,                  KC_LALT,                KC_MS_BTN3,                                         KC_NO,      RGB_SAI,            RGB_SAD,        KC_NO,          KC_NO,          RGB_VAD,
-                                                            KC_MS_BTN1,             KC_MS_BTN2,             KC_NO,                                              TO(0),      TO(3),              KC_NO
-  ),
-  [3] = LAYOUT_moonlander(
-    KC_GESC,        DP_1,                   DP_2,           DP_3,                   DP_4,                   DP_5,         DP_LBRC,            KC_NO,            DP_6,       DP_7,               DP_8,           DP_9,           DP_0,           KC_NO,
-    KC_NO,          DP_Q,                   DP_W,           DP_E,                   DP_R,                   DP_T,         DP_RBRC,            KC_NO,            DP_Y,       DP_U,               DP_I,           DP_O,           DP_P,           KC_NO,
-    KC_NO,          DP_A,                   DP_S,           DP_D,                   DP_F,                   DP_G,         KC_F5,              KC_NO,            DP_H,       DP_J,               DP_K,           DP_L,           DP_SCLN,        KC_NO,
-    KC_NO,          DP_Z,                   DP_X,           DP_C,                   DP_V,                   DP_B,                                               DP_N,       DP_M,               DP_COMM,        DP_DOT,         DP_SLSH,        KC_NO,
-    KC_NO,          KC_LCTRL,               KC_NO,          KC_NO,                  KC_LALT,                KC_BSPACE,                                          KC_LGUI,    KC_LEFT,            KC_UP,          KC_DOWN,        KC_RIGHT,       KC_ENTER,
-                                                            KC_SPACE,               KC_INSERT,              KC_ESC,                                             TO(0),      KC_DELETE,          KC_ENTER
-  ),
+  [0] = V_LAYOUT_TO_moonlander(v_keymaps[0]),
+  [1] = V_LAYOUT_TO_moonlander(v_keymaps[1]),
+  [2] = V_LAYOUT_TO_moonlander(v_keymaps[2]),
+  [3] = V_LAYOUT_TO_moonlander(v_keymaps[3]),
 };
 
 extern bool g_suspend_state;
