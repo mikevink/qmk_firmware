@@ -29,8 +29,8 @@ enum custom_keycodes {
 //                  H    S    V
 #define V_COL_DED {  0,   0,   0}
 #define V_COL_SMB {  0,   0, 255}
-#define V_COL_SPC {127, 255, 255}
-#define V_COL_MOD { 21, 255, 255}
+#define V_COL_SPC { 21, 255, 255}
+#define V_COL_MOD {127, 255, 255}
 #define V_COL_NAV {148, 255, 255}
 #define V_COL_MED { 85, 255, 255}
 #define V_COL_RGB { 35, 255, 255}
@@ -90,7 +90,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
 /*61*/  V_SMB(DP_ASTR),         V_SMB(DP_F),                V_SMB(DP_D),                V_SMB(DP_B),
 /*65*/  V_NAV(KC_PGUP),         V_NAV(KC_PGDOWN),           V_SMB(DP_SLSH),
         // right flap
-/*68*/  V_TO(2),                V_SPC(KC_DELETE),           V_SPC(KC_ENTER),
+/*68*/  V_SPC(KC_ENTER),        V_SPC(KC_DELETE),           V_TO(2),
 /*71*/  V_GUI(KC_LGUI),
     },
     [1] = {
@@ -138,7 +138,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_DED,                      V_DED,                  V_DED,                      V_DED,
         V_ORX(WEBUSB_PAIR),         V_DED,                  V_DED,
         // right flap
-        V_TO(0),                    V_TO(3),                V_DED,
+        V_DED,                      V_TO(3),                V_TO(0),
         V_DED,
     },
     [3] = {
@@ -162,7 +162,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_SMB(DP_6),                V_SMB(DP_Y),            V_SMB(DP_H),                V_SMB(DP_N),
         V_DED,                      V_DED,                  V_DED,
         // right flap
-        V_TO(0),                    V_SPC(KC_DELETE),       V_SPC(KC_ENTER),
+        V_SPC(KC_ENTER),            V_SPC(KC_DELETE),       V_TO(0),
         V_GUI(KC_LGUI),
     },
 };
@@ -175,7 +175,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
     layout[2].key, layout[7].key, layout[12].key, layout[17].key, layout[22].key, layout[27].key, layout[31].key,   layout[67].key, layout[63].key, layout[58].key, layout[53].key, layout[48].key, layout[43].key, layout[38].key, \
     layout[3].key, layout[8].key, layout[13].key, layout[18].key, layout[23].key, layout[28].key,                                   layout[64].key, layout[59].key, layout[54].key, layout[49].key, layout[44].key, layout[39].key, \
     layout[4].key, layout[9].key, layout[14].key, layout[19].key, layout[24].key,                 layout[35].key,   layout[71].key,                 layout[60].key, layout[55].key, layout[50].key, layout[45].key, layout[40].key, \
-                                                                  layout[32].key, layout[33].key, layout[34].key,   layout[68].key, layout[69].key, layout[70].key \
+                                                                  layout[32].key, layout[33].key, layout[34].key,   layout[70].key, layout[69].key, layout[68].key \
 )
 // clang-format on
 
