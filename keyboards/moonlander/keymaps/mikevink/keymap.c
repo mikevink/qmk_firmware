@@ -103,8 +103,8 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_DED,                  V_DED,                      V_DED,                      V_DED,
         V_DED,                  V_DED,                      V_DED,
         // left flap
-        V_DED,                  V_DED,                      V_TO(0),
-        V_DED,
+        V_SPC(KC_SPACE),        V_DED,                      V_TO(0),
+        V_SPC(KC_BSPACE),
         // right half, top to bottom, right to left
         V_DED,                  V_DED,                      V_DED,                      V_DED,              V_DED,
         V_KP(KC_KP_MINUS),      V_KP(KC_KP_PLUS),           V_KP(KC_KP_PLUS),           V_KP(KC_KP_ENTER),  V_KP(KC_KP_ENTER),
