@@ -71,7 +71,7 @@ typedef struct PACKED {
 const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
     [0] = {
         // left half, top to bottom, left to right
-/* 0*/  V_SMB(DP_DLR),          V_SPC(KC_TAB),              V_MOD(KC_CAPSLOCK),         V_MOD(KC_LSHIFT),   V_DED,
+/* 0*/  V_SMB(DP_DLR),          V_SPC(KC_TAB),              V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
 /* 5*/  V_SMB(DP_AMPR),         V_SMB(DP_SCLN),             V_SMB(DP_A),                V_SMB(DP_QUOT),     V_MOD(KC_LCTRL),
 /*10*/  V_SMB(DP_LBRC),         V_SMB(DP_COMM),             V_SMB(DP_O),                V_SMB(DP_Q),        V_GUI(KC_ESC),
 /*15*/  V_SMB(DP_LCBR),         V_SMB(DP_DOT),              V_SMB(DP_E),                V_SMB(DP_J),        V_MOD(KC_RALT),
@@ -95,7 +95,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
     },
     [1] = {
         // left half, top to bottom, left to right
-        V_DED,                  V_DED,                      V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
+        V_DED,                  V_SPC(KC_TAB),              V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
         V_DED,                  V_FN(KC_F1),                V_FN(KC_F5),                V_FN(KC_F9),        V_MOD(KC_LCTRL),
         V_DED,                  V_FN(KC_F2),                V_FN(KC_F6),                V_FN(KC_F10),       V_DED,
         V_DED,                  V_FN(KC_F3),                V_FN(KC_F7),                V_FN(KC_F11),       V_DED,
@@ -106,7 +106,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_SPC(KC_SPACE),        V_DED,                      V_TO(0),
         V_SPC(KC_BSPACE),
         // right half, top to bottom, right to left
-        V_DED,                  V_DED,                      V_DED,                      V_DED,              V_DED,
+        V_DED,                  V_DED,                      V_DED,                      V_DED,              V_SPC(KC_ENTER),
         V_KP(KC_KP_MINUS),      V_KP(KC_KP_PLUS),           V_KP(KC_KP_PLUS),           V_KP(KC_KP_ENTER),  V_KP(KC_KP_ENTER),
         V_KP(KC_KP_ASTERISK),   V_KP(KC_KP_9),              V_KP(KC_KP_6),              V_KP(KC_KP_3),      V_KP(KC_KP_DOT),
         V_KP(KC_KP_SLASH),      V_KP(KC_KP_8),              V_KP(KC_KP_5),              V_KP(KC_KP_2),      V_KP(KC_KP_0),
@@ -114,12 +114,12 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_DED,                  V_DED,                      V_DED,                      V_DED,
         V_DED,                  V_DED,                      V_DED,
         // right flap
-        V_DED,                  V_DED,                      V_DED,
+        V_SPC(KC_ENTER),        V_SPC(KC_DELETE),           V_DED,
         V_DED,
     },
     [2] = {
         // left half, top to bottom, left to right
-        V_DED,                      V_DED,                  V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
+        V_DED,                      V_SPC(KC_TAB),          V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
         V_MED(KC_MEDIA_PREV_TRACK), V_DED,                  V_NAV(KC_MS_LEFT),          V_DED,              V_MOD(KC_LCTRL),
         V_MED(KC_MEDIA_STOP),       V_NAV(KC_MS_UP),        V_NAV(KC_MS_DOWN),          V_DED,              V_DED,
         V_MED(KC_MEDIA_PLAY_PAUSE), V_DED,                  V_NAV(KC_MS_RIGHT),         V_DED,              V_DED,
@@ -138,12 +138,12 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         V_DED,                      V_DED,                  V_DED,                      V_DED,
         V_ORX(WEBUSB_PAIR),         V_DED,                  V_DED,
         // right flap
-        V_DED,                      V_TO(3),                V_TO(0),
+        V_SPC(KC_ENTER),            V_TO(3),                V_TO(0),
         V_DED,
     },
     [3] = {
         // left half, top to bottom, left to right
-        V_GUI(KC_GESC),             V_DED,                  V_DED,                      V_DED,              V_DED,
+        V_GUI(KC_GESC),             V_SPC(KC_TAB),          V_MOD(KC_CAPSLOCK),         V_MOD(KC_LSHIFT),   V_DED,
         V_SMB(DP_1),                V_SMB(DP_Q),            V_SMB(DP_A),                V_SMB(DP_Z),        V_MOD(KC_LCTRL),
         V_SMB(DP_2),                V_SMB(DP_W),            V_SMB(DP_S),                V_SMB(DP_X),        V_DED,
         V_SMB(DP_3),                V_SMB(DP_E),            V_SMB(DP_D),                V_SMB(DP_C),        V_DED,
