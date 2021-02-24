@@ -97,7 +97,7 @@ const V_KEY_DEF PROGMEM v_keymaps[][DRIVER_LED_TOTAL] = {
         // left half, top to bottom, left to right
         V_DED,                  V_SPC(KC_TAB),              V_DED,                      V_MOD(KC_LSHIFT),   V_DED,
         V_DED,                  V_FN(KC_F1),                V_FN(KC_F5),                V_FN(KC_F9),        V_MOD(KC_LCTRL),
-        V_DED,                  V_FN(KC_F2),                V_FN(KC_F6),                V_FN(KC_F10),       V_DED,
+        V_DED,                  V_FN(KC_F2),                V_FN(KC_F6),                V_FN(KC_F10),       V_GUI(KC_ESC),
         V_DED,                  V_FN(KC_F3),                V_FN(KC_F7),                V_FN(KC_F11),       V_DED,
         V_DED,                  V_FN(KC_F4),                V_FN(KC_F8),                V_FN(KC_F12),       V_MOD(KC_LALT),
         V_DED,                  V_DED,                      V_DED,                      V_DED,
